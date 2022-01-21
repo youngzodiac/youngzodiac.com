@@ -37,12 +37,16 @@ body {
     align-items: center;
 }
 
+.feed-item {
+    margin-bottom: 18px;
+}
+
 #content {
     width: 100%;
     margin-top: 64px;
     text-align: left;
 
-    opacity: 0;
+    /* opacity: 0;
     -webkit-animation: fadein 4s;
     -moz-animation: fadein 4s;
     -ms-animation: fadein 4s; 
@@ -52,7 +56,7 @@ body {
     animation-delay: 2s;
     -o-animation-delay: 2s;
     -moz-animation-delay: 2s;
-    -webkit-animation-delay: 2s;
+    -webkit-animation-delay: 2s; */
 }
 
 .yt {
@@ -175,6 +179,7 @@ p {
         padding-left: 24px;
         padding-right: 24px;
       }
+
 
     .yt {
         width: 100%;
