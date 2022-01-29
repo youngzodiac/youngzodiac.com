@@ -37,12 +37,22 @@ body {
     padding: 24px;
 }
 
+.lyrics {
+    position: fixed;
+    left: -1000000px;
+}
+
 #feed {
     margin-top: 18px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+#feed p {
+    max-width: 550px;
 }
 
 .feed-item {
