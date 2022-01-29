@@ -64,7 +64,7 @@ body {
     width: 100%;
     margin-top: 64px;
     text-align: left;
-/* 
+
     opacity: 0;
     -webkit-animation: fadein 4s;
     -moz-animation: fadein 4s;
@@ -75,7 +75,7 @@ body {
     animation-delay: 2s;
     -o-animation-delay: 2s;
     -moz-animation-delay: 2s;
-    -webkit-animation-delay: 2s; */
+    -webkit-animation-delay: 2s;
 }
 
 .email {
