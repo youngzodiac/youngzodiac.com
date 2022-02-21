@@ -43,6 +43,43 @@ body {
     left: -1000000px;
 }
 
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+.hidden-message {
+    opacity: 0;
+    visibility: hidden;
+    animation-fill-mode: both;
+    -webkit-animation: fadeout 2s;
+    -moz-animation: fadeout 2s;
+    -ms-animation: fadeout 2s; 
+    -o-animation: fadeout 2s; 
+    animation: fadeout 2s;
+    animation-fill-mode: both;
+    margin-bottom: -12px;
+}
+
+.hidden-message-revealed {
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    -ms-animation: fadein 2s; 
+    -o-animation: fadein 2s; 
+    animation: fadein 2s;
+    animation-fill-mode: both;
+    margin-bottom: 22px;
+}
+
 #feed {
     margin-top: 18px;
     display: flex;
@@ -68,6 +105,10 @@ body {
     width: 100%;
 }
 
+#audioPlayer {
+    visibility: hidden;
+}
+
 .feed-item {
     margin-bottom: 24px;
     /* border: 2px solid white; */
@@ -90,7 +131,7 @@ body {
     width: 100%;
     margin-top: 64px;
     text-align: left;
-
+    pointer-events: none;
     opacity: 0;
     -webkit-animation: fadein 4s;
     -moz-animation: fadein 4s;
@@ -125,33 +166,63 @@ body {
 }
 
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from { opacity: 0; pointer-events: none; }
+    to   { opacity: 1; pointer-events: auto; }
 }
 
 /* Firefox < 16 */
 @-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from { opacity: 0; pointer-events: none; }
+    to   { opacity: 1; pointer-events: auto; }
 }
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from { opacity: 0; pointer-events: none; }
+    to   { opacity: 1; pointer-events: auto; }
 }
 
 /* Internet Explorer */
 @-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from { opacity: 0; pointer-events: none; }
+    to   { opacity: 1; pointer-events: auto; }
 }
 
 /* Opera < 12.1 */
 @-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from { opacity: 0; pointer-events: none; }
+    to   { opacity: 1; pointer-events: auto; }
 }
+
+@keyframes fadeout {
+    from { opacity: 1; pointer-events: none; }
+    to   { opacity: 0; pointer-events: auto; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeout {
+    from { opacity: 1; pointer-events: none; }
+    to   { opacity: 0; pointer-events: auto; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeout {
+    from { opacity: 1; pointer-events: none; }
+    to   { opacity: 0; pointer-events: auto; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeout {
+    from { opacity: 1; pointer-events: none; }
+    to   { opacity: 0; pointer-events: auto; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadeout {
+    from { opacity: 1; pointer-events: none; }
+    to   { opacity: 0; pointer-events: auto; }
+}
+
 
 #title {
     text-align: center;
@@ -226,6 +297,14 @@ p {
     transition: transform .2s;
   }
   
+  #yz-sigil-1 {
+    width: 200px;
+  }
+
+  #yz-sigil-2 {
+    width: 200px;
+  }
+
   /* Set a specific color for each brand */
   
   .fa-tiktok {
