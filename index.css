@@ -16,7 +16,7 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
-    cursor: url("file:///Users/daniel/Desktop/youngzodiac.com/img/yz-glass-white-green.png"), auto;
+    cursor: url("img/yz-glass-white-green.png"), auto;
 }
 
 @font-face {
@@ -171,7 +171,7 @@ img {
 
 img:hover {
     transform: scale(1.15);
-    cursor: url("file:///Users/daniel/Desktop/youngzodiac.com/img/yz-glass-white-x.png"), auto;
+    cursor: url("img/yz-glass-white-x.png"), auto;
 }
 
 h1 {
@@ -211,7 +211,7 @@ p {
     text-align: center;
     text-decoration: none;
     transition: transform .2s;
-    cursor: url("file:///Users/daniel/Desktop/youngzodiac.com/img/yz-glass-white-x.png"), auto;
+    cursor: url("img/yz-glass-white-x.png"), auto;
   }
   
   .fa-brands {
@@ -221,7 +221,7 @@ p {
     width: 30px;
     text-align: center;
     text-decoration: none;
-    cursor: url("file:///Users/daniel/Desktop/youngzodiac.com/img/yz-glass-white-x.png"), auto;
+    cursor: url("img/yz-glass-white-x.png"), auto;
     transition: transform .2s;
   }
 
@@ -230,7 +230,7 @@ p {
     opacity: 0.7;
     color: rgba(0, 255, 42, 0.7);
     transform: scale(1.15);
-    cursor: url("file:///Users/daniel/Desktop/youngzodiac.com/img/yz-glass-white-x.png"), auto;
+    cursor: url("img/yz-glass-white-x.png"), auto;
   }
   
   /* Set a specific color for each brand */
